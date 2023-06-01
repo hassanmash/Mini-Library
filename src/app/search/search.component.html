@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+        <h6>Search</h6>
+    </div>
+    <div class="card-body"> 
+        <h5>Select the type of search: </h5>
+        <input type="radio" name="searchType" value="idSearch" id="idS" [(ngModel)]="typeSearch" routerLink="searchID"> &nbsp;
+        <label for="idS">Search by ID</label>
+        <br><br>
+        <input type="radio" name="searchType" value="publisherSearch" id="pubS" [(ngModel)]="typeSearch" routerLink="searchPublisher"> &nbsp;
+        <label for="pubS">Search by Publisher</label>
+        <hr>
+        <router-outlet></router-outlet>
+        <button class="btn btn-primary" style="margin: 10px 0;" (click)="PerformSearch()">Search</button>
+        <app-search-result [toSearch]="temp" ></app-search-result> 
+    </div>
+</div>

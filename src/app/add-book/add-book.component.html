@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-header">
+        <h6>Adding a Book!</h6>
+    </div>
+    <div class="card-body">
+        <section class="addSection">
+            <p>Enter Book Name: <input type="text" [(ngModel)]="bName"></p>
+            <p>Select Publisher Name: <select [(ngModel)]="pName">
+                <option *ngFor="let item of pList" [value]="item">{{item}}</option>
+            </select></p>
+            <p>Enter Price: <input type="number" [(ngModel)]="bPrice"></p>
+            <p>Available? &nbsp;&nbsp;
+                <input type="checkbox" [(ngModel)]="stock" id="stockLabel"> 
+                <label for="stockLabel"> &nbsp; {{ stock | available }} </label> 
+            </p>
+        </section>
+            <button class="btn btn-primary" (click)="addBook()">Add Book</button> &nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" (click)="cancelBook()">Cancel</button>
+    </div>
+</div>

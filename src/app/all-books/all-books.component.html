@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+        <h6>Books List</h6>
+    </div>
+    <div class="card-body">
+        
+        <section style="display: flex;">
+            <h5 style="width: 15%; font-weight: 700;">Book ID</h5>
+            <h5 style="width: 25%; font-weight: 700;">Book Name</h5>
+            <h5 style="width: 25%; font-weight: 700;">Publisher</h5>
+            <h5 style="width: 20%; font-weight: 700;">Price</h5>
+            <h5 style="width: 15%; font-weight: 700;">Available</h5>
+        </section>
+        <hr>
+        <app-book *ngFor="let book of bookSrcList" [bookDetail]="book"></app-book>
+    </div>
+</div>

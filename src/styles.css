@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+.searchBy {
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.searchBy p {
+    margin: 0;
+    padding: 0;
+}
+
+.searchBy input {
+    padding: 5px;
+    width: 400px;
+}
